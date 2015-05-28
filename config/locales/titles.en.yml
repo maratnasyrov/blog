@@ -1,6 +1,6 @@
 en:
   titles:
-    application: Rails Base example site
+    application: My photos
     pages:
       home: Home
     devise:

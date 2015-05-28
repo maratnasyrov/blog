@@ -1,0 +1,14 @@
+.row
+  .small-12.medium-8.medium-centered.columns
+    .wraper-article
+      .article-show
+        = link_to 'delete', article_path(article), method: :delete, data: { confirm: 'Are you sure?' }, class: "delete-btn"
+        = link_to 'edit', edit_article_path(article), class: "edit-btn"
+        .title-show = article.title
+        .text-show = article.text
+        = image_tag article.image.url(:medium), class: "image_show"
+        .comment-box =render 'comments/comments'
+        .leave-comment
+          .leave-comment-title Leave comment:
+          =render 'comments/form'
+

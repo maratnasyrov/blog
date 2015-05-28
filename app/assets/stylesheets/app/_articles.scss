@@ -1,0 +1,95 @@
+.article {
+  padding-top: 20px;
+}
+.wraper-article {
+  padding: 0 30px;
+  background-color: rgb(224, 225, 226);
+  border-left: 1px solid silver;
+  border-right: 1px solid silver;
+  border-bottom: 1px solid transparent;
+
+  &:last-child {
+    border-bottom: 1px solid silver;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
+
+.part {
+  background-color: #fafafa;
+  border: 1px solid;
+  border-color: #C0C0C0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.title-index {
+  margin-top:10px;
+  margin-bottom: 10px;
+  font-size: 2.5em;
+  color: dimgray;
+}
+
+.title-show, .text-show{
+  background-color: teal;
+  color: white;
+  text-align: center;
+  border-bottom: 1px solid silver;
+  border-left: 1px solid silver;
+  border-right: 1px solid silver;
+  font-size: 2.125em;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.text-show {
+  border-top: none;
+  border-bottom: none;
+  background-color: white;
+  word-wrap: break-word;
+  font-size: 1em;
+  color: darkcyan;
+}
+
+a.edit-btn, a.delete-btn {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 12px;
+}
+
+a.edit-btn {
+  margin-left: 3%;
+  float: left;
+  background-image: url("edit_white_25.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -9999999px;
+  padding-left: 1.5rem;
+
+  &:hover {
+    background-image: url("edit_grey_25.png");
+  }
+}
+
+a.delete-btn {
+  background-image: url("delete_white_25.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-right: 1.5rem;
+  text-indent: -9999999px;
+  margin-right: 3%;
+  float: right;
+
+  &:hover {
+    background-image: url("delete_red_25.png");
+  }
+}

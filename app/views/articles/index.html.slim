@@ -1,0 +1,9 @@
+.row
+  .small-12.medium-8.medium-centered.columns
+    - articles.each do |article|
+      - if ArticlePolicy.new(current_user, article).manage?
+         .wraper-article
+          .part
+            = link_to (image_tag article.image.url(:medium), class: "image_article") , article_path(article)
+            center
+              .title-index = article.title

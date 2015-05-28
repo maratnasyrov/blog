@@ -20,3 +20,32 @@ li {
 .links {
   font-size: .85rem;
 }
+
+.btn-back {
+  float: left;
+  background-image: url("back_white_25.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -999999px;
+  padding-left: 1.75rem;
+  margin-left: 1%;
+  margin-top: 0.75rem;
+
+  &:hover {
+    background-image: url("back_grey_25.png")
+  }
+}
+
+#root {
+  background-color: whitesmoke;
+}
+
+.alert-box.notice  {
+  margin-bottom: 0;
+  background-color: cadetblue;
+  border: 1px solid silver;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.2rem;
+}
