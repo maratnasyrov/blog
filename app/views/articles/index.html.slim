@@ -1,6 +1,6 @@
 .row
   .small-12.medium-8.medium-centered.columns
-    - articles.each do |article|
+    - articles.includes(:user).each do |article|
       - if ArticlePolicy.new(current_user, article).manage?
          .wraper-article
           .part
