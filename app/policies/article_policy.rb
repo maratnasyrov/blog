@@ -5,6 +5,10 @@ class ArticlePolicy
   end
 
   def manage?
-    @article.privacy == false || @article.user == @user
+    @article.privacy == false || edit?
+  end
+
+  def edit?
+    @article.user == @user
   end
 end

@@ -10,5 +10,6 @@
 #= require skim
 #= require_tree ../templates
 #= require_tree .
+#= require fragments
 
 $(document).foundation()

@@ -1,8 +1,3 @@
-- comments.includes(:user).each do |comment|
-  .comment
-    / - if CommentPolicy.new(current_user, comment).manage?
-    = link_to 'x', [comment.article, comment], method: :delete, class: "delete-comment"
-    .author = comment.user.to_s.titleize
-    .comment-text
-      = comment.text
-      .comment-time =comment.time
+.discussion data-fragment-id='discussion'
+  - article.comments.includes(:user).each do |comment|
+    = render 'comments/comment', comment: comment

@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
-  respond_to :html
+  respond_to :html, :js
 
   expose(:article)
 
@@ -9,13 +9,18 @@ class CommentsController < ApplicationController
 
   def create
     comment = comments.new(comments_params)
-    comment.save
-    redirect_to article_path(article)
+    if comment.save
+      respond_to do |format|
+        format.html
+        format.js { render 'comments/_comments' }
+      end
+    else
+    end
   end
 
   def destroy
     comment.destroy
-    redirect_to article_path(article)
+    respond_with article
   end
 
   private

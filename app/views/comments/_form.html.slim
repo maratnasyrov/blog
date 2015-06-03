@@ -1,3 +1,3 @@
-.form = form_for [article, article.comments.build] do |f|
-    = f.text_area :text
-    = f.button 'Submit'
+.form = form_for([article, article.comments.build], data: { remote: true, behavior: "fragments" }) do |f|
+  = f.text_area :text
+  = f.button 'Submit'

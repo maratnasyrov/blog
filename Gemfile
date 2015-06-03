@@ -33,6 +33,7 @@ gem "seedbank"
 gem "thin"
 gem "pundit"
 gem "paperclip", "~> 4.2"
+gem "fragments.js", github: "fs/fragments.js"
 
 group :staging, :production do
   gem "rails_12factor"

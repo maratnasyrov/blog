@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/fs/fragments.js.git
+  revision: 4d786b7a53ccc487dec3008e789aaaf14b8b0c5d
+  specs:
+    fragments.js (0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -389,6 +395,7 @@ DEPENDENCIES
   formulaic
   foundation-icons-sass-rails
   foundation-rails
+  fragments.js!
   fuubar (~> 2.0.0.rc1)
   interactor
   jasmine (> 2.0)
