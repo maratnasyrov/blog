@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!
 
-  respond_to :html
+  respond_to :html, :js
 
   expose (:articles)
   expose (:article)
@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
   def create
     article = articles.new(articles_params)
     article.save
-    respond_with(article)
+    redirect_to root_path
   end
 
   def destroy

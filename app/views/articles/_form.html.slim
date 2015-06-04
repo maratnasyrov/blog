@@ -1,12 +1,12 @@
-.input-form
-  = form_for article do |f|
-    = f.label :title, class: "title-form"
-    = f.text_field :title, class: "title-input"
-    = f.label :text, class: "text-form"
-    = f.text_area :text, class: "text-input"
-    .img-input
-      = f.file_field :image
+= form_for article do |f|
+  = f.label :title, class: "title-form"
+  = f.text_field :title, class: "title-input"
+  = f.label :text, class: "text-form"
+  = f.text_area :text, class: "text-input"
+  .img-input
+    = f.file_field :image
+  center
     = f.label :privacy
     = f.check_box :privacy, class: "prv-btn"
-    center
+    p
       = f.button 'Submit'

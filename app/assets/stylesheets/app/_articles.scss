@@ -1,6 +1,7 @@
 .article {
   padding-top: 20px;
 }
+
 .wraper-article {
   padding: 0 30px;
   background-color: rgb(224, 225, 226);
@@ -90,4 +91,37 @@ a.delete-btn {
   &:hover {
     background-image: url("delete_red_25.png");
   }
+}
+
+a.add-button {
+  background-color: grey;
+  color: white;
+  display: block;
+  text-align: center;
+  border: 1px solid silver;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+
+  &:hover {
+    background-color: white;
+    color: grey;
+  }
+
+  &:active {
+    background-color: lightgrey;
+  }
+}
+
+.add-button-label {
+  background-color: #e0e1e2;
+  padding-bottom: 1px;
+  padding-top: 1px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-left: 1px solid silver;
+  border-right: 1px solid silver;
 }

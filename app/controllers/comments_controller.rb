@@ -20,7 +20,7 @@ class CommentsController < ApplicationController
 
   def destroy
     comment.destroy
-    respond_with article
+    redirect_to article_path(article)
   end
 
   private

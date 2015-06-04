@@ -1,5 +1,7 @@
 .row
   .small-12.medium-8.medium-centered.columns
+    .add-button-label
+      = render 'add_button'
     - articles.desc_sort.each do |article|
       - if ArticlePolicy.new(current_user, article).manage?
          .wraper-article
