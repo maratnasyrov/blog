@@ -14,3 +14,4 @@ vendor/ruby
 .env
 .pryrc
 public/system/articles
+public/system/users
