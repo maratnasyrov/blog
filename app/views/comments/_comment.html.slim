@@ -1,5 +1,6 @@
 .comment
-  = link_to 'x', [comment.article, comment], method: :delete, class: "delete-comment"
+  - if CommentPolicy.new(current_user, comment).manage?
+    = link_to 'x', [comment.article, comment], method: :delete, class: "delete-comment"
   .author = comment.user.to_s.titleize
   .comment-text = comment.text
     .comment-time =comment.time

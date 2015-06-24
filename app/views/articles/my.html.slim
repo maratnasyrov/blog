@@ -1,0 +1,9 @@
+= render 'articles/new'
+.row
+  .small-12.medium-8.medium-centered.columns
+    - current_user.articles.desc_sort.each do |article|
+      .wraper-article
+        .part
+          = link_to (image_tag article.image.url(:medium), class: "image_article") , article_path(article)
+          center
+            .title-index = article.title

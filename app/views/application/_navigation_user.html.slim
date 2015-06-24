@@ -1,15 +1,6 @@
-ul.right
-  - if user_signed_in?
-    li.has-dropdown
-      a.user-dropdown(href='#') = current_user.full_name_with_email
-      ul.dropdown
-        new_user_registration_path
-        li
-          a href = edit_user_registration_path
-            | Edit profile
-        li
-          a href = destroy_user_session_path
-            | Sign out
-  - else
-    = active_link_to 'Sign in', new_user_session_path, active: :exclusive, wrap_tag: :li
-    = active_link_to 'Sign up', new_user_registration_path, active: :exclusive, wrap_tag: :li
+- if user_signed_in?
+  = active_link_to 'Edit profile', edit_user_registration_path, class: 'panel-button'
+  = active_link_to 'Log out', destroy_user_session_path, class: 'panel-button'
+- else
+  = active_link_to 'Sign in', new_user_session_path, active: :exclusive, wrap_tag: :li
+  = active_link_to 'Sign up', new_user_registration_path, active: :exclusive, wrap_tag: :li

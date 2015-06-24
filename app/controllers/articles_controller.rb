@@ -25,6 +25,14 @@ class ArticlesController < ApplicationController
     respond_with(article)
   end
 
+  def my_articles
+    render 'my'
+  end
+
+  def my_private_posts
+    render 'private'
+  end
+
   private
 
   def articles_params

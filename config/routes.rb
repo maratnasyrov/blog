@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
   end
+
+  get 'my', to: 'articles#my_articles'
+  get 'private', to: 'articles#my_private_posts'
 end

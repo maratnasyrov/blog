@@ -1,0 +1,50 @@
+.panel-label {
+  background-color: #e0e1e2;
+  border-right: 1px solid silver;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 15%;
+  z-index: 2;
+}
+
+a.panel-button {
+  background-color: #e0e1e2;
+  color: grey;
+  display: block;
+  padding-left: 20px;
+  border-top: 1px solid silver;
+  padding: 10px;
+  opacity: 1;
+
+  &:hover {
+    background-color: white;
+    color: gray;
+  }
+
+  &:active {
+    background-color: lightgrey;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid silver;
+  }
+}
+
+.add-btn {
+  float: right;
+  border-left: 1px solid silver;
+}
+
+.root-button {
+  color: teal;
+  display: block;
+  text-align: center;
+  // border-bottom: 1px solid silver;
+  padding: 10px;
+}
+
+.user-name {
+  font-size: 1.5rem;
+  text-align: center;
+}

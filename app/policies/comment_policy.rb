@@ -1,4 +1,4 @@
-def CommentPolicy
+class CommentPolicy
   attr_reader :comment
 
   def initialize(user, comment)

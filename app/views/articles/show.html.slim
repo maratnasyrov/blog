@@ -2,7 +2,7 @@
   .small-12.medium-8.medium-centered.columns
     .wraper-article
       .article-show
-        = render 'buttons', article: article
+        = render 'articles/buttons/buttons', article: article
         .title-show = article.title
         .text-show = article.text
         = image_tag article.image.url(:medium), class: "image_show"

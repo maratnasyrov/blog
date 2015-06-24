@@ -17,6 +17,17 @@ li {
   list-style-position: inside;
 }
 
+#root {
+  height: 100%;
+}
+
+.bg-image {
+  background-image: url("main_back.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+}
+
 .links {
   font-size: .85rem;
 }
@@ -36,6 +47,10 @@ li {
   }
 }
 
+.alert-box {
+  margin-bottom: 0;
+}
+
 .alert-box.notice  {
   margin-bottom: 0;
   background-color: cadetblue;
@@ -45,3 +60,4 @@ li {
   font-size: 1.5rem;
   padding: 0.2rem;
 }
+

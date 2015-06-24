@@ -18,13 +18,9 @@ html class='no-js' lang='en'
 
   body
     #root
-      = render 'navigation'
+      = render 'panel'
       = render 'messages'
 
       = yield
-
-      = render 'footer'
-
-      = render 'articles/new'
 
     = javascript_include_tag :application

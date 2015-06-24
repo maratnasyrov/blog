@@ -4,7 +4,7 @@ nav.top-bar {
   top: 0;
   left: 0;
   background-color: darkslategray;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  color: black;
   z-index: 1;
 
   li.has-dropdown {
@@ -13,6 +13,5 @@ nav.top-bar {
 }
 
 body{
-  padding-top: 45px;
   background-color: whitesmoke;
 }

@@ -16,6 +16,7 @@
         | account
 
       .form-inputs
+        = f.input :image_profile
         = f.input :full_name, required: true, autofocus: true
         = f.input :email, required: true
         = f.input :password, required: true
