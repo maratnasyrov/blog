@@ -2,6 +2,24 @@
   padding-top: 20px;
 }
 
+.index-user-name {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.3rem;
+  color: grey;
+  border-bottom: 1px solid silver;
+  font-family: 'Poiret One', cursive;
+
+  a {
+    color: grey;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
 .wraper-article {
   padding: 0 30px;
   background-color: rgb(224, 225, 226);
@@ -39,6 +57,7 @@
 .title-index {
   font-size: 2.5em;
   color: dimgray;
+  font-family: 'Poiret One', cursive;
 }
 
 .title-show, .text-show{
@@ -48,7 +67,8 @@
   border-bottom: 1px solid silver;
   border-left: 1px solid silver;
   border-right: 1px solid silver;
-  font-size: 2.125em;
+  font-size: 2.125rem;
+  font-family: 'Poiret One', cursive;
 }
 
 .text-show {
@@ -58,8 +78,9 @@
   padding-top: 13px;
   padding-bottom: 13px;
   word-wrap: break-word;
-  font-size: 1em;
+  font-size: 1.5rem;
   color: darkcyan;
+  font-family: 'Poiret One', cursive;
 }
 
 a.edit-btn, a.delete-btn {

@@ -1,6 +1,3 @@
 - if user_signed_in?
-  = active_link_to 'Edit profile', edit_user_registration_path, class: 'panel-button'
-  = active_link_to 'Log out', destroy_user_session_path, class: 'panel-button'
-- else
-  = active_link_to 'Sign in', new_user_session_path, active: :exclusive, wrap_tag: :li
-  = active_link_to 'Sign up', new_user_registration_path, active: :exclusive, wrap_tag: :li
+  = active_link_to 'Edit profile', edit_user_registration_path, class: "edit-profile"
+  = active_link_to 'Log out', destroy_user_session_path, class: "log-out"

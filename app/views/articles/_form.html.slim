@@ -1,5 +1,8 @@
 .medium-12.columns
   = form_for article do |f|
+    - if article.errors.any?
+      - article.errors.full_messages.each do |msg|
+        = msg
     = f.label :title, class: "title-form"
     = f.text_field :title, class: "title-input"
     = f.label :text, class: "text-form"

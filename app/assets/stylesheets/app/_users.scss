@@ -1,0 +1,67 @@
+.log-in {
+  background-color: white;
+  padding: 0 30px;
+  margin: 1.5rem;
+  margin-top: 3rem;
+  border: 1px solid silver;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+a.log-out {
+  float: right;
+  padding-top: 11px;
+  padding-right: 5px;
+  background-image: url("exit_black_25.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -9999999px;
+
+  &:hover {
+    background-image: url("exit_grey_25.png");
+  }
+}
+
+a.edit-profile {
+  float: left;
+  padding-top: 11px;
+  background-image: url("setting_black_25.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -9999999px;
+
+  &:hover {
+    background-image: url("setting_grey_25.png");
+  }
+}
+
+.show-user-name {
+  font-size: 1.7rem;
+  color: dimgrey;
+  font-family: 'Poiret One';
+}
+
+.user-info {
+  height: 120px;
+  background-color: white;
+  border: 1px solid silver;
+  border-top: none;
+  padding: 10px;
+}
+
+.articles-statistic, .comments-statistic {
+  float: left;
+  text-align: center;
+  color: dimgrey;
+  font-family: 'Poiret One';
+}
+
+.articles-statistic-tittle, .comments-statistic-tittle {
+  font-family: 'Poiret One', cursive;
+  font-size: 1.3rem;
+  border-bottom: 1px solid silver;
+}
+
+.comments-statistic {
+  float: right;
+}

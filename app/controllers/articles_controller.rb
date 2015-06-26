@@ -3,16 +3,22 @@ class ArticlesController < ApplicationController
 
   respond_to :html, :js
 
-  expose (:articles)
-  expose (:article)
+  expose(:articles)
+  expose(:article, attributes: :articles_params)
 
   expose(:comments) { article.comments }
   expose(:comment)
 
   def create
-    article = articles.new(articles_params)
-    article.save
-    redirect_to root_path
+    if article.save
+      redirect_to root_path
+    else
+      respond_to do |format|
+        format.html { render action: 'new' }
+        format.json { render json: article.errors, status: :unprocessable_entity }
+        format.js { render json: article.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def destroy
@@ -21,7 +27,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    article.update(articles_params)
+    article.save
     respond_with(article)
   end
 

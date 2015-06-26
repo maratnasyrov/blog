@@ -4,11 +4,10 @@ class CommentsController < ApplicationController
 
   expose(:article)
 
-  expose (:comments)
-  expose (:comment)
+  expose(:comments)
+  expose(:comment, attributes: :comments_params)
 
   def create
-    comment = comments.new(comments_params)
     if comment.save
       respond_to do |format|
         format.html

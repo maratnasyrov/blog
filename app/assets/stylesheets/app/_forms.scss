@@ -12,24 +12,25 @@
   border-right: 1px solid silver;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .heading-form {
   background-color: teal;
   color: white;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  font-family: 'Poiret One', cursive;
 }
 
 .title-form, .text-form {
   border-bottom: none;
   padding: 3px;
   padding-left: 7px;
-  font-size: 1.125em;
+  font-size: 1.5rem;
   color: teal;
+  font-family: 'Poiret One', cursive;
 }
 
 .img-input {

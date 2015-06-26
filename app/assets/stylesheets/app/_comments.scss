@@ -8,6 +8,7 @@
   font-size: 1.75em;
   padding-top: 10px;
   padding-bottom: 10px;
+  font-family: 'Poiret One', cursive;
 }
 
 .leave-comment {
@@ -30,6 +31,7 @@
   font-size: 1.75em;
   padding-top: 10px;
   padding-bottom: 10px;
+  font-family: 'Poiret One', cursive;
 }
 
 .comment {
@@ -49,7 +51,6 @@
 
 .comment-box {
   background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-left: 1px solid silver;
   border-right: 1px solid silver;
 }
@@ -58,6 +59,7 @@
   font-size: 12px;
   float: right;
   color: darkcyan;
+  font-family: 'Poiret One', cursive;
 }
 
 a.delete-comment {
@@ -81,8 +83,9 @@ a.delete-comment {
   padding: 10px;
   padding-left: 17px;
   padding-bottom: 6px;
-  font-size: 1.32em;
+  font-size: 1.32rem;
   border-top-left-radius: 5px;
+  font-family: 'Poiret One', cursive;
 }
 
 .comment-text {
@@ -92,5 +95,6 @@ a.delete-comment {
   padding-right: 17px;
   padding-bottom: 10px;
   color: black;
-  font-size: 1em;
+  font-size: 1.1rem;
+  font-family: 'Poiret One', cursive;
 }

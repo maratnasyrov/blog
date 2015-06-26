@@ -3,11 +3,12 @@ class User < ActiveRecord::Base
     :recoverable, :rememberable, :trackable, :validatable
 
   has_many :articles
+  has_many :comments
 
   validates :full_name, presence: true
 
   has_attached_file :image_profile,
-    :styles => { :medium => "300x300#"},
+    :styles => { :medium => "300x300#", :thumb => "50x50#", :mini => "100x100#"},
     :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :image_profile, :content_type => /\Aimage\/.*\Z/
 
@@ -17,5 +18,13 @@ class User < ActiveRecord::Base
 
   def full_name_with_email
     "#{self[:full_name]} (#{email})"
+  end
+
+  def articles_number
+    articles.size
+  end
+
+  def comments_number
+    comments.size
   end
 end
