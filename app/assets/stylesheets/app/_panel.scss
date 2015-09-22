@@ -1,35 +1,35 @@
 .panel-label {
-  background-color: #e0e1e2;
-  border-right: 1px solid silver;
   position: fixed;
-  top: 0;
-  height: 100%;
-  width: 15%;
+  left: 0;
+  right: 0;
   z-index: 2;
 }
 
+.panel-label-main {
+  background-color: #333;
+  height: 36px;
+  padding: 5px;
+  border-left: 1px solid #262626;
+  border-right: 1px solid #262626;
+}
+
 a.panel-button {
-  background-color: #e0e1e2;
-  color: dimgray;
-  display: block;
+  background-color: #333;
+  color: white;
   padding-left: 20px;
-  border-top: 1px solid silver;
   padding: 10px;
   opacity: 1;
-  font-family: 'Poiret One', cursive;
-  font-size: 1.3rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.9rem;
 
   &:hover {
-    background-color: white;
-    color: dimgray;
+    background-color: #262626;
+    color: white;
   }
 
   &:active {
-    background-color: lightgrey;
-  }
-
-  &:last-child {
-    border-bottom: 1px solid silver;
+    background-color: #262626;
+    color: white;
   }
 }
 
@@ -46,15 +46,34 @@ a.panel-button {
 }
 
 .user-name {
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: center;
 
   a {
-    color: dimgrey;
-    font-family: 'Poiret One', cursive;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
 
     &:hover {
-      color: white;
+      color: dimgray;
+    }
+  }
+}
+
+.user {
+  float: right;
+  margin-top: -25px;
+  margin-right: 10px;
+  background-color: #333;
+}
+
+.tab-bar-section {
+  a {
+    padding: 13px;
+    color: white;
+
+    &:hover {
+      color: dimgray;
+      background-color: #262626
     }
   }
 }

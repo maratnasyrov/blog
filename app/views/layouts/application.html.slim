@@ -15,12 +15,10 @@ html class='no-js' lang='en'
 
     /! Le modernizr
     = javascript_include_tag 'vendor/modernizr'
+    body
+      #root
+        = render 'messages'
+        = render 'panel'
+        = yield
 
-  body
-    #root
-      = render 'panel'
-      = render 'messages'
-
-      = yield
-
-    = javascript_include_tag :application
+  = javascript_include_tag :application

@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
-  respond_to :html, :js
+  # respond_to :js
 
   expose(:article)
 
@@ -8,6 +8,7 @@ class CommentsController < ApplicationController
   expose(:comment, attributes: :comments_params)
 
   def create
+    comment.user = current_user
     if comment.save
       respond_to do |format|
         format.html
@@ -25,6 +26,6 @@ class CommentsController < ApplicationController
   private
 
   def comments_params
-    params.require(:comment).permit(:user_id, :text, :article_id).merge(user_id: current_user.id, article_id: article.id)
+    params.require(:comment).permit(:user_id, :text, :article_id).merge(article_id: article.id)
   end
 end

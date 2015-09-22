@@ -1,12 +1,10 @@
 - if user_signed_in?
   .panel-label
-    = link_to t('titles.application'), root_path, class: "root-button"
-    = render 'navigation_user'
-    .user-name
-      = link_to current_user.full_name, user_path(current_user)
-    = image_tag current_user.image_profile.url(:medium), class: "profile-photo"
-    = render 'articles/buttons/all_posts'
-    = render 'articles/buttons/add_button'
-    = render 'articles/buttons/my_post_button'
-    = render 'articles/buttons/private_post_button'
+    .row
+      .small-14.medium-10.medium-centered.columns
+        .panel-label-main
+          .small-14.medium-7.medium-centered.columns
+            = render "articles/buttons/panel_buttons"
+          .user
+            = image_tag current_user.image_profile.url(:thumb), class: "profile-photo"
 

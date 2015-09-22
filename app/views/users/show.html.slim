@@ -1,17 +1,18 @@
 = render 'articles/new'
 .row
-  .small-11.medium-9.medium-centered.columns.user-info
-    .medium-2.columns
-      = image_tag user.image_profile.url(:mini), class: "show-user-image"
-    .medium-7.medium-centered.columns
-      center.show-user-name = user.full_name
-      .articles-statistic
-        .articles-statistic-tittle All articles
-        = user.articles_number
-      .comments-statistic
-        .comments-statistic-tittle All comments
-        = user.comments_number
-  .small-11.medium-9.medium-centered.columns
+  .small-11.medium-10.medium-centered.columns
+    .user-info
+      .medium-2.columns
+        = image_tag user.image_profile.url(:mini), class: "show-user-image"
+      .medium-7.medium-centered.columns
+        center.show-user-name = user.full_name
+        .articles-statistic
+          .articles-statistic-tittle All articles
+          = user.articles_number
+        .comments-statistic
+          .comments-statistic-tittle All comments
+          = user.comments_number
+  .small-11.medium-10.medium-centered.columns
     - user.articles.each do |article|
       - if ArticlePolicy.new(current_user, article).manage?
         .wraper-article

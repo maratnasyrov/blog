@@ -9,7 +9,7 @@
   font-size: 1.3rem;
   color: grey;
   border-bottom: 1px solid silver;
-  font-family: 'Poiret One', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
 
   a {
     color: grey;
@@ -28,7 +28,7 @@
   border-bottom: 1px solid transparent;
 
   &:first-child {
-    padding-top: 20px;
+    padding-top: 50px;
   }
 
   &:last-child {
@@ -57,7 +57,7 @@
 .title-index {
   font-size: 2.5em;
   color: dimgray;
-  font-family: 'Poiret One', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .title-show, .text-show{
@@ -68,7 +68,7 @@
   border-left: 1px solid silver;
   border-right: 1px solid silver;
   font-size: 2.125rem;
-  font-family: 'Poiret One', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .text-show {
@@ -80,7 +80,7 @@
   word-wrap: break-word;
   font-size: 1.5rem;
   color: darkcyan;
-  font-family: 'Poiret One', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 a.edit-btn, a.delete-btn {
