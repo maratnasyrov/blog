@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :users, only: :show
+  resources :users, only: [:show, :index]
 
   get 'my', to: 'articles#my_articles'
   get 'private', to: 'articles#my_private_posts'

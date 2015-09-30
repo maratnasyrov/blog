@@ -62,7 +62,6 @@ a.panel-button {
 .user {
   float: right;
   margin-top: -25px;
-  margin-right: 10px;
   background-color: #333;
 }
 
@@ -76,4 +75,15 @@ a.panel-button {
       background-color: #262626
     }
   }
+}
+
+.custom-dropdown-button {
+  padding: 0;
+  margin: 0;
+  float: right;
+  background-color: black;
+}
+
+.f-dropdown {
+  max-width: 100px;
 }

@@ -3,6 +3,11 @@ class UsersController < ApplicationController
 
   respond_to :html
 
+  expose(:users)
   expose(:user)
   expose(:article) { Article.new() }
+
+
+  def index
+  end
 end

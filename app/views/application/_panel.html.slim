@@ -5,6 +5,9 @@
         .panel-label-main
           .small-14.medium-7.medium-centered.columns
             = render "articles/buttons/panel_buttons"
-          .user
-            = image_tag current_user.image_profile.url(:thumb), class: "profile-photo"
-
+          button.custom-dropdown-button aria-controls="drop1" aria-expanded="false" data-dropdown="drop1" href="#"
+            .user
+              = image_tag current_user.image_profile.url(:mini), class: "profile-photo"
+          ul#drop1.f-dropdown aria-hidden="true" data-dropdown-content=""
+            li = active_link_to 'Edit profile', edit_user_registration_path
+            li = active_link_to 'Sign out', destroy_user_session_path

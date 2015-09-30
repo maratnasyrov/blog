@@ -1,6 +1,5 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
-  # respond_to :js
 
   expose(:article)
 
@@ -9,13 +8,9 @@ class CommentsController < ApplicationController
 
   def create
     comment.user = current_user
-    if comment.save
-      respond_to do |format|
-        format.html
-        format.js { render 'comments/_comments' }
-      end
-    else
-    end
+    success = comment.save
+
+    render_comment if success
   end
 
   def destroy
@@ -24,6 +19,13 @@ class CommentsController < ApplicationController
   end
 
   private
+
+  def render_comment
+    respond_to do |format|
+      format.html
+      format.js { render 'comments/_comments' }
+    end
+  end
 
   def comments_params
     params.require(:comment).permit(:user_id, :text, :article_id).merge(article_id: article.id)
