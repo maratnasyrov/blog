@@ -9,5 +9,7 @@
             .user
               = image_tag current_user.image_profile.url(:mini), class: "profile-photo"
           ul#drop1.f-dropdown aria-hidden="true" data-dropdown-content=""
+            .user-login
+              = current_user.full_name
             li = active_link_to 'Edit profile', edit_user_registration_path
             li = active_link_to 'Sign out', destroy_user_session_path

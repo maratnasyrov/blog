@@ -9,7 +9,10 @@
         .comment-box
           =render 'comments/comments'
         .leave-comment
-          .leave-comment-title Leave comment:
-          =render 'comments/form'
-        = render 'edit'
-
+          dl.accordion data-accordion=""
+            dd.accordion-navigation
+              a href="#comment-form"
+                .leave-comment-title Leave comment
+              #comment-form.content
+                =render 'comments/form'
+              = render 'edit'

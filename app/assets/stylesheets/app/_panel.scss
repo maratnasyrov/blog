@@ -11,6 +11,10 @@
   padding: 5px;
   border-left: 1px solid #262626;
   border-right: 1px solid #262626;
+  position: relative;
+  button {
+    outline: none;
+  }
 }
 
 a.panel-button {
@@ -86,4 +90,25 @@ a.panel-button {
 
 .f-dropdown {
   max-width: 100px;
+  border: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  top: 38px !important;
+
+  li {
+    border: 1px solid silver;
+    text-align: center;
+    color: dimgrey;
+    font-family: 'Source Sans Pro', sans-serif;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    &:last-child {
+      border-top: none;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
 }
