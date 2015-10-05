@@ -11,5 +11,7 @@
 #= require_tree ../templates
 #= require_tree .
 #= require fragments
+#= require comment
+#= require disabled_button
 
 $(document).foundation()

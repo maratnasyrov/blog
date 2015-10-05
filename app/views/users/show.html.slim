@@ -1,4 +1,3 @@
-= render 'articles/new'
 .row
   .small-11.medium-10.medium-centered.columns
     .user-info
@@ -7,10 +6,12 @@
       .medium-7.medium-centered.columns
         center.show-user-name = user.full_name
         .articles-statistic
-          .articles-statistic-tittle All articles
+          .articles-statistic-tittle
+            = t('user.article_statistic')
           = user.articles_number
         .comments-statistic
-          .comments-statistic-tittle All comments
+          .comments-statistic-tittle
+            = t('user.comment_statistic')
           = user.comments_number
   .small-11.medium-10.medium-centered.columns
     - user.articles.each do |article|

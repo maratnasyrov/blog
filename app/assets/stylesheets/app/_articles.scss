@@ -39,6 +39,27 @@
   }
 }
 
+.no-articles {
+    margin-top: 38px;
+    padding: 10px;
+    padding-top: 100px;
+    height: 300px;
+    text-align: center;
+    background-color: rgb(224, 225, 226);
+    border: 1px solid silver;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 2.5em;
+    color: dimgray;
+    font-family: 'Source Sans Pro', sans-serif;
+
+    h5 {
+      font-size: 0.5em;
+      color: dimgray;
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+}
+
 .part {
   background-color: #fafafa;
   border: 1px solid;
@@ -61,7 +82,7 @@
 }
 
 .title-show, .text-show{
-  background-color: teal;
+  background-color: #333;
   color: white;
   text-align: center;
   border-bottom: 1px solid silver;
@@ -81,6 +102,15 @@
   font-size: 1.5rem;
   color: darkcyan;
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+.new-button-label {
+  height: 100px;
+}
+
+.new-dropdown {
+  max-width: 400px !important;
+  border: 1px solid teal !important;
 }
 
 a.edit-btn, a.delete-btn {

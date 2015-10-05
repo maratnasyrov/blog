@@ -1,14 +1,17 @@
-= render 'articles/new'
 .row
   .small-14.medium-10.medium-centered.columns
-    - articles.includes(:user).desc_sort.each do |article|
-      - if ArticlePolicy.new(current_user, article).manage?
-        .wraper-article
-          .small-4.medium-2.columns
-            = link_to (image_tag article.user.image_profile.url(:average), class: "index-user-image"), user_path(article.user)
-            .index-user-name = link_to article.user.full_name, user_path(article.user)
-          .small-10.medium-8.medium-centered.columns
-            .part
-              = link_to (image_tag article.image.url(:medium), class: "image_article"), article_path(article)
-              center
-                .title-index = article.title
+    - if articles.size < 1
+      .no-articles
+        = t('article.messages.no_articles.html')
+    else
+      - articles.includes(:user).desc_sort.each do |article|
+        - if ArticlePolicy.new(current_user, article).manage?
+          .wraper-article
+            .small-4.medium-2.columns
+              = link_to (image_tag article.user.image_profile.url(:average), class: "index-user-image"), user_path(article.user)
+              .index-user-name = link_to article.user.full_name, user_path(article.user)
+            .small-10.medium-8.medium-centered.columns
+              .part
+                = link_to (image_tag article.image.url(:medium), class: "image_article"), article_path(article)
+                center
+                  .title-index = article.title

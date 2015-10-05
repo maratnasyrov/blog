@@ -7,8 +7,7 @@
 
 .panel-label-main {
   background-color: #333;
-  height: 36px;
-  padding: 5px;
+  height: 38px;
   border-left: 1px solid #262626;
   border-right: 1px solid #262626;
   position: relative;
@@ -17,7 +16,7 @@
   }
 }
 
-a.panel-button {
+.panel-button, a.panel-button {
   background-color: #333;
   color: white;
   padding-left: 20px;
@@ -65,7 +64,8 @@ a.panel-button {
 
 .user {
   float: right;
-  margin-top: -25px;
+  margin-top: -53px;
+  margin-right: 10px;
   background-color: #333;
 }
 

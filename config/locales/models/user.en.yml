@@ -1,7 +1,7 @@
 en:
-  active_record:
-    models:
-      user:
-    attributes:
-      user:
-        full_name:
+  user:
+    edit_profile: Edit profile
+    sign_out: Sign out
+    article_statistic: All articles
+    comment_statistic: All comments
+

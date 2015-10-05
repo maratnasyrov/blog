@@ -1,5 +1,5 @@
 class CommentPolicy
-  attr_reader :comment
+  attr_reader :comment, :user
 
   def initialize(user, comment)
     @user = user
@@ -7,6 +7,6 @@ class CommentPolicy
   end
 
   def manage?
-    comment.user == @user
+    comment.user == user
   end
 end

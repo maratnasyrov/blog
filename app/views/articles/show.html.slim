@@ -1,18 +1,20 @@
-.row
-  .small-12.medium-10.medium-centered.columns
-    .wraper-article
-      .article-show
-        = render 'articles/buttons/buttons', article: article
-        .title-show = article.title
-        .text-show = article.text
-        = image_tag article.image.url(:medium), class: "image_show"
-        .comment-box
-          =render 'comments/comments'
-        .leave-comment
-          dl.accordion data-accordion=""
-            dd.accordion-navigation
-              a href="#comment-form"
-                .leave-comment-title Leave comment
-              #comment-form.content
-                =render 'comments/form'
-              = render 'edit'
+- if ArticlePolicy.new(current_user, article).manage?
+  .row
+    .small-12.medium-10.medium-centered.columns
+      .wraper-article
+        .article-show
+          = render 'articles/buttons/buttons', article: article
+          .title-show = article.title
+          .text-show = article.text
+          = image_tag article.image.url(:medium), class: "image_show"
+          .comment-box
+            =render 'comments/comments'
+          .leave-comment
+            dl.accordion data-accordion=""
+              dd.accordion-navigation
+                a href="#comment-form"
+                  .leave-comment-title
+                    = t('comment.leave_comment')
+                #comment-form.content
+                  =render 'comments/form'
+                = render 'edit'

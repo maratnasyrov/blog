@@ -1,7 +1,8 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!
+  before_action :can_manage?, only: %i(update, destroy)
 
-  respond_to :html, :js
+  respond_to :html
 
   expose(:articles)
   expose(:article, attributes: :articles_params)
@@ -10,15 +11,8 @@ class ArticlesController < ApplicationController
   expose(:comment)
 
   def create
-    if article.save
-      redirect_to root_path
-    else
-      respond_to do |format|
-        format.html { render action: 'new' }
-        format.json { render json: article.errors, status: :unprocessable_entity }
-        format.js { render json: article.errors, status: :unprocessable_entity }
-      end
-    end
+    article.save
+    redirect_to root_path
   end
 
   def destroy
@@ -40,6 +34,10 @@ class ArticlesController < ApplicationController
   end
 
   private
+
+  def can_manage?
+    ArticlePolicy.new(current_user, article).edit?
+  end
 
   def articles_params
     params.require(:article).permit(:title, :text, :image, :privacy).merge(user_id: current_user.id)

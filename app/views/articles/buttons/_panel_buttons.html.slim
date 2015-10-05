@@ -1,5 +1,5 @@
-= active_link_to 'New article', new_article_path, data: { remote: true, reveal_id: "new_article" }, class: "panel-button"
-= active_link_to 'All posts', articles_path , class: "panel-button"
-= active_link_to 'My posts', my_path , class: "panel-button"
-= active_link_to 'My private posts', private_path, class: "panel-button"
-= active_link_to 'All users', users_path, class: "panel-button"
+= render 'articles/buttons/new'
+= link_to t('panel.all_posts'), articles_path , class: "panel-button"
+= link_to t('panel.my_posts'), my_path , class: "panel-button"
+= link_to t('panel.my_private_posts'), private_path, class: "panel-button"
+= link_to t('panel.all_users'), users_path, class: "panel-button"

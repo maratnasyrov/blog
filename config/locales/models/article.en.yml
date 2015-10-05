@@ -1,0 +1,17 @@
+en:
+  article:
+    messages:
+      no_articles:
+        html: >
+          <strong>No articles yet</strong></br>
+          <br>
+          <h5>For add new article, please push the "New" button on the top panel</h5>
+      no_private_articles:
+        html: >
+          <strong>No private articles</strong></br>
+      no_my_articles:
+        html: >
+          <strong>You have not yet created articles</strong>
+    head:
+      new: New article
+      edit: Edit article
