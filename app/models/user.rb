@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
   has_attached_file :image_profile,
     :styles => { :medium => "300x300#", :thumb => "52x52#", :mini => "25x25#", :average => "100x100#"},
-    :default_url => "/images/:style/missing.png"
+    :default_url => ":style/missing_profile_photo.png"
   validates_attachment_content_type :image_profile, :content_type => /\Aimage\/.*\Z/
 
   def to_s
