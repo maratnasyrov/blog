@@ -61,6 +61,7 @@
 }
 
 .part {
+  text-align: center;
   background-color: #fafafa;
   border: 1px solid;
   border-color: #C0C0C0;
@@ -68,6 +69,12 @@
   border-bottom-right-radius: 5px;
   padding-bottom: 10px;
   margin-bottom: 20px;
+  transition: all .2s cubic-bezier(.15, .62, .39, 1.21);
+  transform: scale(0);
+
+  &.zoom {
+    transform: scale(1);
+  }
 
   img {
     width: 100%;
@@ -109,7 +116,7 @@
 }
 
 .new-dropdown {
-  max-width: 400px !important;
+  max-width: 467px !important;
   border: 1px solid teal !important;
 }
 

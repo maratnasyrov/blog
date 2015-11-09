@@ -1,16 +1,22 @@
-.medium-12.columns
+.medium-15.columns
   = form_for article do |f|
-    - if article.errors.any?
-      - article.errors.full_messages.each do |msg|
-        = msg
-    = f.label :title, class: "title-form"
-    = f.text_field :title, class: "title-input"
-    = f.label :text, class: "text-form"
-    = f.text_area :text, class: "text-input"
-    .img-input
-      = f.file_field :image
-    center.check-privacy
-      = f.check_box :privacy, class: "prv-btn"
-      = f.label :privacy
-      p
-        = f.button 'Submit'
+    .medium-6.columns
+      - if article.errors.any?
+        - article.errors.full_messages.each do |msg|
+          = msg
+      = f.label :title, class: "title-form"
+      = f.text_field :title, class: "title-input"
+      = f.label :text, class: "text-form"
+      = f.text_area :text, class: "text-input"
+    .medium-6.columns
+      = f.label :image, class: "title-form"
+      .img-input
+        = f.file_field :image, id: "upload-photo", class: "select-image"
+        img src="#" alt="your" id="preview" class="preview-photo"
+    center
+      = f.label :privacy, class: "title-form"
+      .switch.round.privacy
+        = f.check_box :privacy
+        = f.label :privacy
+    center.round
+      p = f.button 'Submit', class: "round"

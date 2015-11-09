@@ -34,7 +34,7 @@
 }
 
 .img-input {
-  height: 300px;
+  height: 200px;
   width: 100%;
   position: relative;
   background-color: white;
@@ -75,40 +75,30 @@
   border-color: teal;
 }
 
-.check-privacy {
-  input[type="checkbox"] {
-    position: absolute;
-    left: -99999px;
-  }
+.privacy {
+  margin-bottom: 20px;
+}
 
-  label {
-    position: relative;
+.text-input, .title-input {
+  border-radius: 5px !important;
+}
 
-    &:after {
-      content: "✔";
-      opacity: 0;
-      position: absolute;
-      top: 1px;
-      right: -8px;
-    }
+.text-input {
+  min-height: 105px !important;
+}
 
-    &:before {
-      content: " ";
-      display: block;
-      width: 10px;
-      height: 10px;
-      background: rgba(#fff, 0.5);
-      border: 1px solid #000;
-      position: absolute;
-      top: 1px;
-      right: -10px;
-    }
-  }
+.preview-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
 
-  input[type="checkbox"]:checked + label {
+.background-hidden {
+  background-image: none;
+}
 
-    &:after {
-      opacity: 1;
-    }
-  }
+.select-image {
+  z-index: 2;
 }

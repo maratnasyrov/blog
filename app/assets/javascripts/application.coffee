@@ -13,5 +13,7 @@
 #= require fragments
 #= require comment
 #= require disabled_button
+#= require article
+#= require preview
 
 $(document).foundation()
