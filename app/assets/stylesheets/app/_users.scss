@@ -31,6 +31,12 @@
   margin-top: 35px;
 }
 
+.table {
+  &:first-child {
+    margin-top: 38px;
+  }
+}
+
 .user-table {
   height: 75px;
   background-color: white;
@@ -38,8 +44,8 @@
   border-top: none;
   padding: 10px;
 
-  &:first-child {
-    margin-top: 38px;
+  &:hover {
+    opacity: 0.5;
   }
 }
 

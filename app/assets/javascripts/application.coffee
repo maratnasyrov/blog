@@ -15,5 +15,6 @@
 #= require disabled_button
 #= require article
 #= require preview
+#= require messages
 
 $(document).foundation()

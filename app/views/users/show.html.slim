@@ -14,7 +14,7 @@
             = t('user.comment_statistic')
           = user.comments_number
   .small-11.medium-10.medium-centered.columns
-    - user.articles.each do |article|
+    - user.articles.desc_sort.each do |article|
       - if ArticlePolicy.new(current_user, article).manage?
         .wraper-article
           .medium-9.medium-centered.columns

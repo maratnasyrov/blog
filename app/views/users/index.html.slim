@@ -1,11 +1,11 @@
 .row
   .small-11.medium-10.medium-centered.columns
-    / .search
-    /   | Search user
     - users.each do |user|
-      .user-table
-        .medium-2.columns
-          = image_tag user.image_profile.url(:thumb), class: "show-user-image"
-        .medium-7.medium-centered.columns
-          .show-user-name = user.full_name
+      .table
+        = link_to user_path(user) do
+          .user-table
+            .medium-2.columns
+              = image_tag user.image_profile.url(:thumb), class: "show-user-image"
+            .medium-7.medium-centered.columns
+              .show-user-name = user.full_name
 

@@ -13,4 +13,8 @@ class ArticlePolicy
   def edit?
     article.user == user
   end
+
+  def redirect
+    redirect_to root_path
+  end
 end

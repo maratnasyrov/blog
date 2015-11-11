@@ -35,10 +35,6 @@ class ArticlesController < ApplicationController
 
   private
 
-  def can_manage?
-    ArticlePolicy.new(current_user, article).edit?
-  end
-
   def articles_params
     params.require(:article).permit(:title, :text, :image, :privacy).merge(user_id: current_user.id)
   end
