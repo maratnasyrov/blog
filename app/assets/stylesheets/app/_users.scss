@@ -8,6 +8,19 @@
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
+.edit-profile {
+
+  margin: 0;
+  margin-bottom: 1.5rem;
+  background-color: white;
+  padding: 30px;
+  padding-top: 1rem;
+  border: 1px solid silver;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 .user-login {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.1rem;

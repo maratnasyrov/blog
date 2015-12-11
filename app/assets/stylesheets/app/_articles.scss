@@ -88,7 +88,7 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.title-show, .text-show{
+.title-show, .text-show, .title-edit {
   background-color: #333;
   color: white;
   text-align: center;
@@ -97,6 +97,11 @@
   border-right: 1px solid silver;
   font-size: 2.125rem;
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+.title-edit {
+  border: 1px solid #333;
+  border-bottom: none;
 }
 
 .text-show {
